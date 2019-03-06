@@ -23,7 +23,19 @@ public class Trie {
     public void remove(String word) {
         if (contains(word)) {
             EntryNode current = trie.getRoot();
+            for (int i = 0; i < word.length(); i++) {
+                char character = word.charAt(i);
+                EntryNode child = current.getChild(character);
+                current = child;
+            }
+            current.setTerminal(false);
+//            while (!current.isTerminal()) {
+//                I can't seem to be able to make a getParent function
 
+//                EntryNode temp = current.getParent();
+//                current = null;
+//                current = temp;
+//            }
         }
     }
 

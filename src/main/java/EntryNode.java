@@ -33,6 +33,7 @@ public class EntryNode {
         this.isTerminal = isTerminal;
     }
 
+
     @Override
     public boolean equals(Object obj) {
         if (!(obj instanceof EntryNode)) {
